@@ -1,6 +1,7 @@
 fun main ()  {
     Numbers()
-    names()
+   var details=names("Sophia","Laura","Brawlian","Thomas","Everline")
+    println(details)
     Robot()
     Brands()
 }
@@ -11,14 +12,17 @@ fun Numbers()  {
         }
     }
 }
-fun names(){
-    var Schools= arrayOf("Kingsway","Kolanya","Omuga","Siany","Ringa")
-    for(school in Schools){
-        if (school.length>5){
+fun names(num1:String,num2:String,num3:String,num4:String,num5:String):Array<String> {
+    var schools = arrayOf(num1, num2, num3, num4, num5)
+    for (school in schools) {
+        if (school.length > 5)
             println(school)
         }
+        return schools
+
     }
-}
+
+
 fun Robot ()  {
     var age =0
     if (age<6){
@@ -31,23 +35,25 @@ fun Robot ()  {
         println("Coca cola")
     }
 }
-fun Brands ()   {
-    for (num in 1..100){
+
+fun Brands () {
+    for (num in 1..100) {
         println(num)
-        for(num in 1..100){
-            if (num % 3 ==0){
+        for (num in 1..100) {
+            if (num % 3 == 0) {
                 println("Fizz")
+            }
         }
-        }
-        for (Fizz in 1..100){
-            if(num % 5 ==0){
+        for (Fizz in 1..100) {
+            if (num % 5 == 0) {
                 println("Buzz")
             }
         }
-        for (num in 1..100){
-            if (num % 3==0 && num % 5==0){
+        for (num in 1..100) {
+            if (num % 3 == 0 && num % 5 == 0) {
                 println("FizzBuzz")
             }
         }
     }
 }
+
